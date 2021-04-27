@@ -3,10 +3,14 @@ package com.analyzer.utils;
 public class MoodAnalyzer {
 	
 	public  static String analyseMood(String message) {
-		if(message.toUpperCase().contains("SAD"))
+		if(message.toUpperCase().contains("SAD"))   {
 		   return "SAD";
+	    }
+		else if(message.toUpperCase().contains("Any")) {
+			return "HAPPY";
+		}
 		else
-		   return "HAPPY";
+			return "HAPPY";	
 	}
 	
 }
