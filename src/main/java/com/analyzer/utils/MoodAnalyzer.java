@@ -12,7 +12,7 @@ public class MoodAnalyzer {
 		this.message=message;
 	}
 	
-	public String analyseMood() {
+	public String analyseMood() throws MoodAnalyzerException {
 		try {
 		if(message.contains("SAD"))   {
 		   return "SAD";
@@ -23,7 +23,7 @@ public class MoodAnalyzer {
 		else
 			return "HAPPY";	
 		}catch (NullPointerException ae) {
-			return "HAPPY";
+			throw new MoodAnalyzerException("Invalid Mood! Please provide valid mood ");
 		}
 		
 	}
