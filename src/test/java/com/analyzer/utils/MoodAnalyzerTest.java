@@ -1,11 +1,14 @@
-package com.analyzer.test;
+package com.analyzer.utils;
 
 import org.junit.Test;
 import com.analyzer.utils.MoodAnalyzer;
 import static org.junit.Assert.assertEquals;
+import org.junit.Before;
 
 public class MoodAnalyzerTest {
+	  
 	
+	 
 	 @Test
 	 public void testAnalyseMood_Shouldreturn_Happy( ) {
 			String message="I am in happy Mood";

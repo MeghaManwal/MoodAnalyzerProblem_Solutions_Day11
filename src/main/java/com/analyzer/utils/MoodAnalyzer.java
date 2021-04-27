@@ -2,6 +2,15 @@ package com.analyzer.utils;
 
 public class MoodAnalyzer {
 	
+	private String message;
+	public MoodAnalyzer( ) {
+		
+	}
+	
+	public MoodAnalyzer (String message) {
+		this.message=message;
+	}
+	
 	public  static String analyseMood(String message) {
 		if(message.toUpperCase().contains("SAD"))   {
 		   return "SAD";
