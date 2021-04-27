@@ -2,24 +2,30 @@ package com.analyzer.utils;
 
 public class MoodAnalyzer {
 	
-	private String message;
+	public String message;
 	public MoodAnalyzer( ) {
 		
 	}
 	
 	public MoodAnalyzer (String message) {
+		super();
 		this.message=message;
 	}
 	
-	public  static String analyseMood(String message) {
-		if(message.toUpperCase().contains("SAD"))   {
+	public String analyseMood() {
+		try {
+		if(message.contains("SAD"))   {
 		   return "SAD";
 	    }
-		else if(message.toUpperCase().contains("Any")) {
+		else if(message.contains("Any")) {
 			return "HAPPY";
 		}
 		else
 			return "HAPPY";	
+		}catch (NullPointerException ae) {
+			ae.printStackTrace();
+		}
+		return "Null";
 	}
 	
 }
