@@ -23,9 +23,9 @@ public class MoodAnalyzer {
 		else
 			return "HAPPY";	
 		}catch (NullPointerException ae) {
-			ae.printStackTrace();
+			return "HAPPY";
 		}
-		return "Null";
+		
 	}
 	
 }
